@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="box"><textarea cols="38" rows="20" id="area"></textarea><br><br>
+    
+        <div id="wordCount">Word Count: 0</div>
+
+        <script>
+            document.getElementById('area').addEventListener('input', function() {
+                const text = this.value.trim();
+                const wordCount = text ? text.split(/\s+/).length : 0;
+                document.getElementById('wordCount').textContent = `Word Count: ${wordCount}`;
+            });
+        </script>
+</body>
+</html>

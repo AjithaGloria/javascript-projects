@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="box"><input type="text" id="boxx"><br><br>
+        <button type="submit" onclick="pie()">Calculate</button>
+        <div id="tin"></div>
+    </div>
+    <script>
+    
+       
+    function pie(){
+            const months=Number(document.getElementById('boxx').value)
+        let rate=0
+        if(months<3)
+            rate = 5.8
+        else if(months>=3 && months<=6)
+            rate = 6.5
+        else if(months>=7 && months<=9)
+            rate = 6.8
+        else
+            rate = 7 
+        
+       
+        let result=document.querySelector('#tin')
+        result.innerHTML="rate is"+ rate + " "+ "%"
+    }
+    
+
+    </script>
+</body>
+</html>

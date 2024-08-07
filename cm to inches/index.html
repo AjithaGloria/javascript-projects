@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Length Converter</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h2>cm to inches</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="cm to inches">
+        </div>
+    <!-- onclick is used to giveus the output when the click button is presssed -->
+        <div>
+            <button type="submit" onclick="convert()">Convert to inches</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        // convert is a js funtion which contains js code
+      function convert(){
+        // run document in console to understand better
+        const cm= Number(document.getElementById("input").value)
+        const inch=cm/2.54
+        // result is used to target the div tag above named result
+        const result = document.getElementById("result")
+        result.innerHTML = inch.toFixed(3) + " inches"
+      }
+    </script>
+</body>
+</html>
